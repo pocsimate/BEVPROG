@@ -1,0 +1,60 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+
+int main()
+{
+
+    double value;
+    string unit;
+    vector <double> values;
+    double largest=0;
+    double smallest=0;
+    double sum=0;
+
+    cout<<"Enter a value, followed by a unit (m/cm/in/ft)"<<endl;
+
+    while(cin>>value>>unit && value!='|')
+    {
+        if(unit=="m")
+            value=value;
+
+            else if(unit=="cm")
+                value=value/100;
+
+            else if(unit=="in")
+                value=value*0.0254;
+
+            else if(unit=="ft")
+                value=value*0.3048;
+
+            else {
+            cout<<"Illegal unit"<<endl;
+            continue;
+            }
+
+        values.push_back(value);
+        sort(values.begin(),values.end());
+        sum+=value;
+
+
+    }
+
+    cout<<"Summary:"<<endl;
+
+    cout<<"Sum of values: "<<sum<<" m"<<endl;
+    cout<<"Number of entered values: "<<values.size()<<endl;
+    cout<<"The smallest value: "<<values[0]<<endl;
+    cout<<"The largest value: "<<values[values.size()-1]<<endl;
+
+    cout<<"The entered values: "<<endl;
+        for(int i=0;i<values.size();i++){
+            cout<<values[i]<<" m"<<endl;
+        }
+
+    return 0;
+
+}
