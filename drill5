@@ -1,0 +1,99 @@
+#include "std_lib_facilities.h"
+using namespace std;
+
+int main(){
+    
+    int i=0;
+    
+    try {
+        
+        //Cout << "Success!\n";                 wrong version
+        cout << "Success!\n";                 //correct version
+        
+        //cout << "Success!\n;
+        cout << "Success!\n";
+        
+        //cout << "Success" << !\n"
+        cout << "Success" << "!\n";
+        
+        //cout << success << '\n';
+        cout << "Success!" << '\n';
+        
+        //string res = 7; vector<int> v(10); v[5] = res; cout << "Success!\n";
+        int res = 7; vector<int> v(10); v[5] = res; cout << "Success!\n";
+        
+        //vector<int> v(10); v(5) = 7; if (v(5)!=7) cout << "Success!\n";
+        vector<int> v2(10); v[5] = 7; if (v[5]==7) cout << "Success!\n";
+        
+        //if (cond) cout << "Success!\n"; else cout << "Fail!\n";
+        bool cond=true; if (cond) cout << "Success!\n"; else cout << "Fail!\n";
+        
+        //bool c = false; if (c) cout << "Success!\n"; else cout << "Fail!\n";
+        bool c = false; if (!c) cout << "Success!\n"; else cout << "Fail!\n";
+        
+        //string s = "ape"; boo c = "fool"<s; if (c) cout << "Success!\n";
+        string s = "ape"; bool cc = "fool"<s; if (!c) cout << "Success!\n";
+        
+        //string s = "ape"; if (s=="fool") cout << "Success!\n";
+        string s1 = "ape"; if (s1!="fool") cout << "Success!\n";
+        
+        //string s = "ape"; if (s+"fool") cout < "Success!\n";
+        string s2 = "ape"; if (s2<"fool") cout << "Success!\n";
+        
+        //vector<char> v3(5); for (int i=0; 0<v3.size(); ++i) ; cout << ".Success!\n";
+        vector<char> v3(5); for (int i=0; i<v3.size(); ++i) ; cout << "Success!\n";
+        
+        //vector<char> v(5); for (int i=0; i<=v.size(); ++i) ; cout << "Success!\n";
+        vector<char> v4(5); for (int i=0; i<v4.size(); ++i) ; cout << "Success!\n";
+        
+        //string s = "Success!\n"; for (int i=0; i<6; ++i) cout << s[i];
+        string s3 = "Success!\n"; for (int i=0; i<8; ++i) cout << s3[i]<<flush; cout<<endl;
+        
+        //if (true) then cout << "Success!\n"; else cout << "Fail!\n";
+        if (true)  cout << "Success!\n"; else cout << "Fail!\n";
+        
+        //int x = 2000; char c = x; if (c==2000) cout << "Success!\n";
+        int x = 2000; int c1 = x; if (c1==2000) cout << "Success!\n";
+        
+        //string s3 = "Success!\n"; for (int i=0; i<10; ++i) cout << s3[i];
+        string s4 = "Success!\n"; for (int i=0; i<s4.length(); ++i) cout << s4[i];
+        
+        //vector v(5); for (int i=0; i<=v.size(); ++i) ; cout << "Success!\n";
+        vector <int> v5(5); for (int i=0; i<=v5.size(); ++i) ; cout << "Success!\n";
+        
+        //int i=0; int j = 9; while (i<10) ++j; if (j<i) cout << "Success!\n";
+        int i=0; int j = 9; while (i<10) ++i; if (j<i) cout << "Success!\n";
+        
+        //int x = 2; double d = 5/(x–2); if (d==2*x+0.5) cout << "Success!\n";
+        double y = 2; double d = 5/(y+2); if (d==(y-0.75)) cout << "Success!\n";
+        
+        //string<char> s = "Success!\n"; for (int i=0; i<=10; ++i) cout << s[i];
+        string ss = "Success!\n"; for (int i=0; i<ss.length(); ++i) cout << ss[i];
+        
+        //int i=0; while (i<10) ++j; if (j<i) cout << "Success!\n";
+        int z=0; int w=8; while (z<10) ++z; if (j<z) cout << "Success!\n";
+        
+        //int x = 4; double d = 5/(x–2); if (d=2*x+0.5) cout << "Success!\n";
+        int xx = 3; double dd = 5/(xx-2); if (dd==2*xx-1) cout << "Success!\n";
+        
+        //cin << "Success!\n";
+        cout << "Success!\n";
+        
+        keep_window_open();
+        return 0;
+    }
+    catch (exception& e){
+            
+        cerr<<"error: "<<e.what()<<'\n';
+        keep_window_open();
+        return 1;
+    }
+    
+    catch(...){
+        
+        cerr<<"Oops:unknown exception!\n";
+        keep_window_open();
+        return 2;
+    }
+    
+}
